@@ -1,38 +1,46 @@
+import 'package:apiintergrations/view/widgets/tab1.dart';
+import 'package:flutter/material.dart';
 
-class TestPage extends StatelessWidget  {
-  const TestPage({super.key});
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      initialIndex:0,
+      initialIndex: 0,
       length: 3,
       child: Scaffold(
         drawer: const Drawer(),
         appBar: AppBar(
           centerTitle: true,
           title: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               DropdownButton<String>(
-                value: null,
-                icon: const Icon(Icons.arrow_downward),
+                value: 'NFL',
+                // icon: const Icon(Icons.arrow_downward),
                 iconSize: 24,
                 elevation: 16,
                 style: const TextStyle(color: Colors.deepPurple),
                 underline: Container(
                   height: 2,
-                  color: Colors.deepPurpleAccent,
+                  color: Colors.green,
                 ),
+                
                 onChanged: (String? newValue) {},
-                items: <String>['One', 'Two', 'Free', 'Four']
+                items: <String>['NFL', 'Two', 'Free', 'Four']
                     .map<DropdownMenuItem<String>>((String value) {
                   return DropdownMenuItem<String>(
                     value: value,
-                    child: Text(value),
+                    child: Text(
+                      value,
+                      style: const TextStyle(color: Colors.white),
+                    ),
                   );
                 }).toList(),
               ),
-              const Text('AppBar Demo'),
+              const Text('NEWS'),
             ],
           ),
           actions: <Widget>[
@@ -64,9 +72,6 @@ class TestPage extends StatelessWidget  {
         body: const TabBarView(
           children: [
             Tab1(),
-            // Center(
-            //   child: Text("It's rainy here"),
-            // ),
             Center(
               child: Text("tab 2"),
             ),
@@ -78,7 +83,4 @@ class TestPage extends StatelessWidget  {
       ),
     );
   }
-  
-  
-  
 }

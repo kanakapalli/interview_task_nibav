@@ -2,7 +2,6 @@
 //
 //     final pageData = pageDataFromJson(jsonString);
 
-import 'package:meta/meta.dart';
 import 'dart:convert';
 
 PageData pageDataFromJson(String str) => PageData.fromJson(json.decode(str));
