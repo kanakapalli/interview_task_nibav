@@ -1,0 +1,8 @@
+To recap it:
+- Your goal is to make api calls for just the newslist part of the app shown at https://www.playerline.com
+- Replicate the navigation 
+- The other 2 tabs (Following and Resource Center can be empty)
+- The data is located at https://www.playerline.org/test/static-endpoint/api/newslist/0.json
+- If you have time after properly rendering the data from this endpoint, implement pagination via infinite scrolling (just like the actual Playerline app does) by loading https://www.playerline.org/test/static-endpoint/api/newslist/1.json once user scrolls to the end of the data from 0.json)
+- Use the most sophisticated architecture, libraries & SDKs and follow best practices in all the parts of the app, wherever applicable, to showcase your talent and what you're capable of.
+- Push code GitHub and share the access to thezerostartup@gmail.com
